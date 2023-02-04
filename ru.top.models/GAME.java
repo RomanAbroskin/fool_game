@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class GAME {
+public class Game {
    private String cardDeck;
    private Plaver firstPlayer;
    private Plaver secondPLayer;
