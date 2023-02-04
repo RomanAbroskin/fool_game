@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class GAME {
-   private String Koser;
-   private Plaver firstPlayer=new Plaver();
-   private Plaver secondPLayer=new Plaver();
-   private List<Integer>Koloda;
+   private String cardDeck;
+   private Plaver firstPlayer;
+   private Plaver secondPLayer;
+   private List<Integer>deck;
 }
