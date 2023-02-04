@@ -1,9 +1,8 @@
 import java.util.List;
 
 public class GAME {
-    String Koser;
-    Plaver firstPlayer=new Plaver();
-    Plaver secondPLayer=new Plaver();
-
-    List<Integer>Koloda;
+   private String Koser;
+   private Plaver firstPlayer=new Plaver();
+   private Plaver secondPLayer=new Plaver();
+   private List<Integer>Koloda;
 }
