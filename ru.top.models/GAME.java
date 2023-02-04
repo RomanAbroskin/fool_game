@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class Game {
-   private String cardDeck;
+   private List<Card> cardDeck;
    private Plaver firstPlayer;
    private Plaver secondPLayer;
-   private List<Integer> deck;
+   private Suit trumpSuit;
 }
