@@ -2,7 +2,8 @@ import java.util.List;
 
 public class GAME {
     String Koser;
-    boolean oneIgrok;
-    boolean twoIgrok;
+    Plaver firstPlayer=new Plaver();
+    Plaver.secondPLayer=new Plaver();
+
     List<Integer>Koloda;
 }
