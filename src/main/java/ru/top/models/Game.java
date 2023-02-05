@@ -1,12 +1,10 @@
 package ru.top.models;
 
-import ru.top.models.Card;
-import ru.top.models.Player;
-import ru.top.models.Suit;
-
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static ru.top.models.Suit.*;
 
 public class Game {
    private final List<Card> cardDeck;
@@ -15,10 +13,10 @@ public class Game {
    private final Suit trumpSuit;
    private int curMove;    //0, если ходит первый игрок и 1 если второй
 
-   public Game(Player firstPlayer, Player secondPLayer) {
+   public Game(List<Card> cardDeck, Player firstPlayer, Player secondPLayer) {
+      this.cardDeck = cardDeck;
       this.firstPlayer = firstPlayer;
       this.secondPLayer = secondPLayer;
-      this.cardDeck = initDeck();
       this.curMove = new Random().nextInt(2);
       this.trumpSuit = randomSuit();
    }
@@ -28,9 +26,17 @@ public class Game {
     * @return initial state of the deck
     * Нужно вернуть стандартный список из 36 карт всех мастей (размешанный)
     */
-   private List<Card> initDeck() {
+   private void  initDeck() {
+      List<Card>cards=new ArrayList<>();
+      for (int i=6;i<=14;i++){
+         cards.add(new Card(i,HEARTS));
+         cards.add(new Card(i,DIAMONDS));
+         cards.add(new Card(i,SPADES));
+         cards.add(new Card(i,CLUBS));
+      }
+
+      randomShuffle();
       //Здесь после создания колоды будет вызываться метод "размешать"
-      return null;
    }
 
    /**
