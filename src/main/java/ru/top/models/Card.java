@@ -1,7 +1,19 @@
 package ru.top.models;
 
 public class Card {
-    private int value;
-    private Suit suit;
+    private final int value;
+    private final Suit suit;
 
+    public Card(int value, Suit suit) {
+        this.value = value;
+        this.suit = suit;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public Suit getSuit() {
+        return suit;
+    }
 }
